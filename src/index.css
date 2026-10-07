@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #111111;
+  --color-surface-card: #151515;
+  --color-surface-card-hover: #1c1c1c;
+  --color-surface-subtle: #202020;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-medium: rgba(255, 255, 255, 0.14);
+  --color-border-gold: rgba(212, 175, 55, 0.3);
+  --color-border-gold-strong: #d4af37;
+  
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-light: #f5e7a9;
+  --color-brand-gold-dark: #a18018;
+  --color-brand-gold-muted: #846914;
+  --color-brand-gold-glow: rgba(212, 175, 55, 0.15);
+
+  --color-foreground: #f5f5f3;
+  --color-foreground-muted: #a3a39e;
+  --color-foreground-subtle: #73736c;
+
+  --font-display: 'Cinzel', serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --shadow-gold-subtle: 0 0 20px rgba(212, 175, 55, 0.12);
+  --shadow-gold-strong: 0 0 35px rgba(212, 175, 55, 0.25);
+  --shadow-card-elevated: 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Luxury gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5e7a9 0%, #d4af37 50%, #aa8520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle gold border aura */
+.gold-border-glow {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.12);
+}
+
+/* Luxury card gradient */
+.bg-card-gradient {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(15, 15, 15, 0.95) 100%);
+}
+
+/* Noise overlay simulation for high-end feel */
+.bg-subtle-mesh {
+  background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+                    radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
